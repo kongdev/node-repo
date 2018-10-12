@@ -1,0 +1,36 @@
+{
+    "nodejs" : {
+        "port" : 3000
+    },
+    "rediscluster": [
+        {
+            "host": "app1.local",
+            "port": 7000
+        },
+        {
+            "host": "app1.local",
+            "port": 7001
+        },
+        {
+            "host": "app2.local",
+            "port": 7000
+        },
+        {
+            "host": "app2.local",
+            "port": 7001
+        },
+        {
+            "host": "app3.local",
+            "port": 7000
+        },
+        {
+            "host": "app3.local",
+            "port": 7001
+        }
+    ],
+    "mongodb": {
+        "url" : "localhost.dockerdomain",
+        "port" : 27017,
+        "dbname" : "pantip"
+    }
+}

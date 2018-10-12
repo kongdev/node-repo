@@ -1,0 +1,36 @@
+{
+    "nodejs" : {
+        "port" : 3000
+    },
+    "rediscluster": [
+        {
+            "host": "redis1.devpantip.com",
+            "port": 7000
+        },
+        {
+            "host": "redis1.devpantip.com",
+            "port": 7001
+        },
+        {
+            "host": "redis2.devpantip.com",
+            "port": 7000
+        },
+        {
+            "host": "redis2.devpantip.com",
+            "port": 7001
+        },
+        {
+            "host": "redis3.devpantip.com",
+            "port": 7000
+        },
+        {
+            "host": "redis3.devpantip.com",
+            "port": 7001
+        }
+    ],
+    "mongodb": {
+        "url" : "mongodb.devpantip.com",
+        "port" : 27017,
+        "dbname" : "pantip_month10"
+    }
+}
