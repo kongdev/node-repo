@@ -31,6 +31,6 @@
     "mongodb": {
         "url" : "localhost.dockerdomain",
         "port" : 27017,
-        "dbname" : "pantip"
+        "dbname" : "db"
     }
 }

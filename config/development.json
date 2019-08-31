@@ -4,33 +4,33 @@
     },
     "rediscluster": [
         {
-            "host": "redis1.devpantip.com",
+            "host": "redis1.domain.com",
             "port": 7000
         },
         {
-            "host": "redis1.devpantip.com",
+            "host": "redis1.domain.com",
             "port": 7001
         },
         {
-            "host": "redis2.devpantip.com",
+            "host": "redis2.domain.com",
             "port": 7000
         },
         {
-            "host": "redis2.devpantip.com",
+            "host": "redis2.domain.com",
             "port": 7001
         },
         {
-            "host": "redis3.devpantip.com",
+            "host": "redis3.domain.com",
             "port": 7000
         },
         {
-            "host": "redis3.devpantip.com",
+            "host": "redis3.domain.com",
             "port": 7001
         }
     ],
     "mongodb": {
-        "url" : "mongodb.devpantip.com",
+        "url" : "mongodb.domain.com",
         "port" : 27017,
-        "dbname" : "pantip_month10"
+        "dbname" : "db"
     }
 }
