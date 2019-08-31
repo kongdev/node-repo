@@ -15,8 +15,7 @@ const MongoClient = require('mongodb').MongoClient
 const assert = require('assert')
 
 const connectDB = async () => {
-    //const m = await MongoClient.connect(`mongodb://${url}:${port}`, { useNewUrlParser: true });
-    //return m.db(dbname);
+  
     return await MongoClient.connect(`mongodb://${url}:${port}`, { useNewUrlParser: true });
 }
 
@@ -24,11 +23,6 @@ exports.readTag = (id, tagname) => {
     return client.zrem(`follow_tag:${id}`, tagname)
 }
 
-exports.readTopic = (id , tags) =>{
-    /*tags.foreach((name)=>{
-        client.zrem(`follow_tag:${id}`, name)
-    })*/
-}
 
 exports.getRedisFollowTag = (id) => {
     return client.zrange(`follow_tag:${id}`, 0, -1, 'WITHSCORES')
@@ -58,7 +52,7 @@ exports.getTagsDirectory = async (data) => {
 
     let arr = []
     await util.asyncForEach(data, async ({ mid, name }) => {
-        //console.log(name)
+        
         const td = await db.collection('tag_directory').findOne({ name_lower: name })
         if (td) {
             arr.push({

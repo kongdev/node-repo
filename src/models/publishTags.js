@@ -15,8 +15,7 @@ const MongoClient = require('mongodb').MongoClient
 const assert = require('assert')
 
 const connectDB = async () => {
-    //const m = await MongoClient.connect(`mongodb://${url}:${port}`, { useNewUrlParser: true });
-    //return m.db(dbname);
+  
     return await MongoClient.connect(`mongodb://${url}:${port}`, { useNewUrlParser: true });
 }
 
@@ -39,10 +38,10 @@ exports.publishFollowTags = async (owner_id, topic_id, tags) => {
         await util.asyncForEach(tf, async (objFollowers) => {
 
             await util.asyncForEach(objFollowers.mid, async (mid) => {
-                /*var pipeline = pub.pipeline();
+                var pipeline = pub.pipeline();
                 pipeline.publish(`follow_tag:${mid}`, topic_id).exec().then((result) => {
                     console.log(result)
-                });*/
+                });
 
                 if(owner_id != mid){
                     const obj = { mid: mid, topic_id: topic_id, tag_name: name };
